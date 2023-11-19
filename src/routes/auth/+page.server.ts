@@ -67,8 +67,10 @@ export const actions = {
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo:
-            "https://gtekdaunjqjlrmahbenc.supabase.co/auth/v1/callback/next=/app",
+          queryParams: {
+            access_type: "offline",
+            prompt: "consent",
+          },
         },
       });
 
