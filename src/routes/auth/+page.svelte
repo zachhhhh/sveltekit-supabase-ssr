@@ -9,7 +9,10 @@
   <button formaction="?/signup" style="margin-top: 12px;">Signup</button>
 </form>
 <form method="POST" action="?/signin">
-  <button style="margin-top: 12px;" name="provider" value="github">Login with Google</button>
+  <button style="margin-top: 12px;" name="provider" value="google">Login with Google</button>
+</form>
+<form method="POST" action="?/signin">
+  <button style="margin-top: 12px;" name="provider" value="facebook">Login with Facebook</button>
 </form>
 
 {#if form?.message}
