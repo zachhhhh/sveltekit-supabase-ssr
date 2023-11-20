@@ -72,6 +72,8 @@ export const actions = {
             prompt: "consent",
 
             provider: "facebook",
+            redirectTo:
+              "https://gtekdaunjqjlrmahbenc.supabase.co/auth/v1/callback",
           },
         },
       });
