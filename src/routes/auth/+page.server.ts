@@ -70,22 +70,13 @@ export const actions = {
           queryParams: {
             access_type: "offline",
             prompt: "consent",
+
+            provider: "facebook",
           },
         },
       });
 
       /* Facebook OAuth sign-in. */
-      async function signInWithFacebook() {
-        const { data, error } = await supabase.auth.signInWithOAuth({
-          provider: "facebook",
-          options: {
-            queryParams: {
-              access_type: "offline",
-              prompt: "consent",
-            },
-          },
-        });
-      }
 
       if (error) throw error;
 
