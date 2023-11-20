@@ -70,10 +70,22 @@ export const actions = {
           queryParams: {
             access_type: "offline",
             prompt: "consent",
+          },
+        },
+      });
+    } else if (provider) {
+      /* OAuth sign-in. */
 
-            provider: "facebook",
-            redirectTo:
-              "https://gtekdaunjqjlrmahbenc.supabase.co/auth/v1/callback",
+      /**
+       * Sign-in will not happen yet, because we're on the server-side,
+       * but we need the returned url.
+       */
+      const { data, error } = await supabase.auth.signInWithOAuth({
+        provider: "facebook",
+        options: {
+          queryParams: {
+            access_type: "offline",
+            prompt: "consent",
           },
         },
       });
