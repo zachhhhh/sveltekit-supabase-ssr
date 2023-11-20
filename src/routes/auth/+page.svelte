@@ -1,5 +1,6 @@
 <script lang="ts">
   export let form
+
 </script>
 
 <form method="POST" action="?/signin">
@@ -14,6 +15,7 @@
 <form method="POST" action="?/signin">
   <button style="margin-top: 12px;" name="provider" value="facebook">Login with Facebook</button>
 </form>
+
 
 {#if form?.message}
   <p>{form.message}</p>
