@@ -73,6 +73,8 @@ export const actions = {
           },
         },
       });
+      /* Login successful, redirect. */
+      throw redirect(303, "/app");
     } else if (provider) {
       /* OAuth sign-in. */
 
